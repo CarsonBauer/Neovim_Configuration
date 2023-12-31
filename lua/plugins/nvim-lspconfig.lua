@@ -82,6 +82,12 @@ local config = function()
 		filetypes = { "solidity" },
 	})
 
+	lspconfig.rust_analyzer.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "rust" },
+	})
+
 	-- typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
 	lspconfig.emmet_ls.setup({
 		capabilities = capabilities,
@@ -97,6 +103,7 @@ local config = function()
 			"svelte",
 			"vue",
 			"html",
+			"rust",
 		},
 	})
 
@@ -151,6 +158,7 @@ local config = function()
 			"css",
 			"c",
 			"cpp",
+			"rust",
 		},
 		init_options = {
 			documentFormatting = true,
